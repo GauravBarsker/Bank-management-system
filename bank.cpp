@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 using namespace std;
 class BankAccount {
@@ -26,10 +27,10 @@ public:
   void withdraw(double amount){
     if(balance >= amount){
       balance-=amount;
-      cout<<"\t\tAmount withdraw successfully ......."<<endl;
+      cout<<"\t\tAmount withdrawn successfully......."<<endl;
     }
     else{
-      cout<<"\t\t Insufficient Balance ...."<<endl;
+      cout<<"\t\t Insufficient balance...."<<endl;
     }
   }
 
@@ -90,8 +91,8 @@ int main() {
 			string name;
 			int accountNum;
 			double balance;
-			cout<<"\t\tEnter full Name : ";
-			getline(cin, name);
+			cout<<"\t\tEnter first Name : ";
+			cin>>name;
 			cout<<"\t\tEnter account number : ";
 			cin>>accountNum;
 			cout<<"\t\tEnter intial balance : ";
@@ -133,12 +134,12 @@ int main() {
     case 5:{
       int accountNum;
       double amount;
-      cout<<"\t\tEnter Account to withdraw money: ";
+      cout<<"\t\tEnter Account to withdraw money : ";
       cin>>accountNum;
       BankAccount* account =   bank.findAccount(accountNum);
       
       if(account != NULL){
-        cout<<"\t\t Enter the ammount to withdraw";
+        cout<<"\t\t Enter the amount to withdraw : ";
         cin>>amount;
         account -> withdraw(amount);
       }else{
@@ -155,5 +156,5 @@ int main() {
 		cin>>f;
 }
 while(f=="y" || f=="yes" || f == "YES" || f=="Yes" || f=="Y");
-	cout<<"\n\t\t Thank You for Visiting ";
+	cout<<"\n\t\t Thank You for Visiting........";
 }
